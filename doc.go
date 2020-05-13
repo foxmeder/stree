@@ -1,6 +1,6 @@
 /*
 
-sort 提供了无限级分类排序方法
+stree 提供了无限级分类排序方法
 
 包内实现了两个简单易用的方法 GetList 和 GetCateTree
 
@@ -11,12 +11,12 @@ sort 提供了无限级分类排序方法
 然后使用
 
 	var list []Item
-	err := sort.GetList(&list)
+	err := stree.GetList(&list)
 
 或
 
 	var list []Item
-	tree,err := sort.GetCateTree(list)
+	tree,err := stree.GetCateTree(list)
 
 注意 GetList 方法的参数必须为slice的指针，GetCateTree 的参数为slice
 

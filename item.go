@@ -1,6 +1,6 @@
 package stree
 
-// SortItem 可排序数据的interface
+// Item 可排序数据的interface
 type Item interface {
 	SetLevel(level int64) // 写level值
 	GetMeta() ItemMeta    // 获取数据排序需要的数据
