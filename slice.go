@@ -75,7 +75,7 @@ func (s *Sorter) GetList(list interface{}) error {
 		return errors.New("not a list")
 	}
 	// 排序
-	s.sort()
+	// s.sort()
 	// 根据list类型创建slice
 	typo := ret.Type().Elem()
 	sv := reflect.MakeSlice(ret.Type(), s.len, s.len)
@@ -132,6 +132,8 @@ func (s *Sorter) GetTree(level int) []*CateTree {
 
 // 创建channel按顺序放入排序后的数据
 func (s *Sorter) fillChan() chan ItemMeta {
+	// 排序
+	s.sort()
 	c := make(chan ItemMeta, s.len)
 	go func() {
 		defer close(c)
